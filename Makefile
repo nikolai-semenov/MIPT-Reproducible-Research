@@ -1,18 +1,16 @@
-SHELL := /bin/bash
+.PHONY: all html clean
 
-.PHONY: all demo clean
+all: html
 
-all: demo
-
-demo: venv
-	source venv/bin/activate; \
+html: venv
+	. venv/bin/activate; \
 	jupyter-nbconvert --execute Iris.ipynb; \
 	deactivate
 
 
 venv: requirements.txt
 	virtualenv -p python3 venv
-	source venv/bin/activate; \
+	. venv/bin/activate; \
 	pip install -r requirements.txt; \
 	deactivate
 
