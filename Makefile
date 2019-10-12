@@ -4,7 +4,7 @@ all: html
 
 html: venv
 	. venv/bin/activate; \
-	jupyter-nbconvert --execute Iris.ipynb; \
+	./run.sh; \
 	deactivate
 
 
