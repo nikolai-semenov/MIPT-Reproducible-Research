@@ -16,3 +16,9 @@ To run __Iris.ipynb__ and save the result as __Iris.html__, run:
 ```
 $ make html
 ```
+
+To pull Docker image, type:
+
+```
+$ docker pull nik7/mipt-reproducible-research
+```
